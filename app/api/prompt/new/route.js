@@ -1,4 +1,4 @@
-import Prompt from "@models/prompt";
+import Prompt from "@model/prompts";
 import { connectToDB } from "@utils/dbconfig";
 
 export const POST = async (request) => {
