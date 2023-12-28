@@ -10,14 +10,18 @@ const CreatePrompt = () => {
   const router = useRouter();
   const { data: session } = useSession();
 
+  // submitting status
   const [submitting, setIsSubmitting] = useState(false);
+  // post variable
   const [post, setPost] = useState({ prompt: "", tag: "" });
 
+  // function triggered by Submit button
   const createPrompt = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      // send data to api path and get response
       const response = await fetch("/api/prompt/new", {
         method: "POST",
         body: JSON.stringify({

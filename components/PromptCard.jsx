@@ -12,6 +12,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
 
   const [copied, setCopied] = useState("");
 
+  // profile click function set routes
   const handleProfileClick = () => {
     console.log(post);
 

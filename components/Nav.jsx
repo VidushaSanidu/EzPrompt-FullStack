@@ -7,6 +7,7 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 export default function Nav() {
   // get session data
+  // if user is signed in session is defined
   const { data: session } = useSession();
 
   // set state variables
